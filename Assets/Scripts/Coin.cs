@@ -19,7 +19,7 @@ public class Coin : MonoBehaviour {
 
 	IEnumerator afterStart(){
 
-		yield return new WaitForSeconds (.3f);
+		yield return new WaitForSeconds (0.5f);
 		aSource = Camera.main.GetComponent<AudioSource> ();
 
 	}

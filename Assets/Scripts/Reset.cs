@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Reset : MonoBehaviour {
 
-//	public AudioClip impact;
-//	public AudioSource aSource;
+	public AudioClip impact;
+	public AudioSource aSource;
 
 	void Start () {
 
-//		aSource = Camera.main.GetComponent<AudioSource> ();
+		aSource = Camera.main.GetComponent<AudioSource> ();
 
 	}
 		
@@ -20,7 +20,7 @@ public class Reset : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.gameObject.CompareTag("Player"))
-//			aSource.PlayOneShot (impact);
+			aSource.PlayOneShot (impact);
 			Application.LoadLevel(Application.loadedLevel);
 	}
 }
