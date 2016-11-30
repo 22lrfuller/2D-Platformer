@@ -27,8 +27,8 @@ public class SpawnManager : MonoBehaviour {
 		{
 			Vector2 randomPosition = originPosition + new Vector2 (Random.Range(horizontalMin, horizontalMax), Random.Range (verticalMin, verticalMax));
 			Instantiate(platform, randomPosition, Quaternion.identity);
-			originPosition = randomPosition;
+			originPosition = randomPosition;			
+
 		}
 	}
-
 }

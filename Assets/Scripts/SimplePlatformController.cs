@@ -10,7 +10,6 @@ public class SimplePlatformController : MonoBehaviour {
 	public float jumpForce = 1000f;
 	public Transform groundCheck;
 
-
 	private bool grounded = false;
 	private Rigidbody2D rb2d;
 
@@ -19,14 +18,16 @@ public class SimplePlatformController : MonoBehaviour {
 	{
 		rb2d = GetComponent<Rigidbody2D>();
 	}
-		
+
 	void Update () 
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 
-		if (Input.GetButtonDown("Jump") && grounded)
+		if (Input.GetButtonDown("Jump"))
 		{
-			jump = true;
+			if (grounded == true) {
+				jump = true;
+			}
 		}
 	}
 
@@ -61,4 +62,5 @@ public class SimplePlatformController : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+		
 }

@@ -14,7 +14,7 @@ public class SpawnCoin : MonoBehaviour {
 
 	IEnumerator afterStart(){
 
-		yield return new WaitForSeconds(.4f);
+		yield return new WaitForSeconds(.2f);
 		Spawn ();
 
 	}
@@ -24,7 +24,7 @@ public class SpawnCoin : MonoBehaviour {
 		for (int i = 0; i < coinSpawns.Length; i++)
 		{
 			int coinFlip = Random.Range (0, 3);
-			if (coinFlip > 0)
+			if (coinFlip < 1)
 				Instantiate(coin, coinSpawns[i].position, Quaternion.identity);
 		}
 	}

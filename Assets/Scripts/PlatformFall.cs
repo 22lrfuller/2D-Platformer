@@ -4,7 +4,9 @@ using System.Collections;
 public class PlatformFall : MonoBehaviour {
 
 	public float fallDelay = 1f;
-
+	public BoxCollider2D boxCo;
+	public MeshRenderer meshRen;
+	public SpriteRenderer sprRen;
 
 	private Rigidbody2D rb2d;
 
@@ -21,11 +23,24 @@ public class PlatformFall : MonoBehaviour {
 		}
 	}
 
+	void OnCollision2D (Collision2D other)
+	{
+		if (other.gameObject.CompareTag("DeathTrigger"))
+		{
+			Death ();
+		}
+	}
+
 	void Fall()
 	{
 		rb2d.isKinematic = false;
 	}
 
-
+	void Death()
+	{
+		boxCo.enabled = false;
+		meshRen.enabled = false;
+		sprRen.enabled = false;
+	}
 
 }
