@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\backCam.cs" />
      <Compile Include="Assets\Scripts\coinStorage.cs" />
      <Compile Include="Assets\Scripts\music.cs" />
+     <Compile Include="Assets\Scripts\startMenuScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
