@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2280,7 +2280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bff3be28f2f5ac40aab26b6781f4648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPlatforms: 50
+  maxPlatforms: 500
   platform: {fileID: 380322706}
   horizontalMin: 2.75
   horizontalMax: 3
